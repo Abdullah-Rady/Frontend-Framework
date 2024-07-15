@@ -48,7 +48,6 @@ function createTextNode(vdom, parentEl, index){
     const { value } = vdom
     const textNode = document.createTextNode(value) 
     vdom.el = textNode 
-    // parentEl.append(textNode) 
     insert(textNode, parentEl, index)
 }
 
@@ -58,7 +57,6 @@ function createElementNode(vdom, parentEl, index){
     addProps(element, props, vdom) 
     vdom.el = element
     children.forEach((child) => mountDOM(child, element))
-    // parentEl.append(element)
     insert(element, parentEl, index)
 }
 

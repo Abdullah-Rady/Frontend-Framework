@@ -27,23 +27,27 @@ export function createApp({state, view, reducers = {}}){
 
     function renderApp(){
         
-        if(vdom){
-            destroyDOM(vdom)
-        }
+        // if(vdom){
+        //     destroyDOM(vdom)
+        // }
         
-        vdom = view(state, emit)
+        // vdom = view(state, emit)
 
+        // const newVdom = view(state, emit)
+
+        // mountDOM(vdom, parentEl)
+        
         const newVdom = view(state, emit)
-
-        mountDOM(vdom, parentEl)
-        
         vdom = patchDOM(vdom, newVdom, parentEl)
     }
 
     return {
         mount(_parentEl){
+            // parentEl = _parentEl
+            // renderApp()
+            // vdom = view(state, emit)
+            // mountDOM(vdom, parentEl)
             parentEl = _parentEl
-            renderApp()
             vdom = view(state, emit)
             mountDOM(vdom, parentEl)
         },
