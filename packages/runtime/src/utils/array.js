@@ -111,7 +111,7 @@ class ArrayWithOriginalIndices {
         this.#originalIndices.splice(index, 0, -1) 
     
         return operation 
-    }
+    } 
 
     moveItem(item, toIndex) {
     
